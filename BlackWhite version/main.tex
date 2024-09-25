@@ -1,0 +1,116 @@
+\documentclass[blackwhite,twosided]{CBTGTR}
+\usepackage{F10}
+
+\begin{document}
+\chapter{Ukázka prostředí}
+Všechna prostředí jsou:
+\begin{table*}[h]
+\begin{tabular}{| r | c | p{6cm} |}
+	\hline
+	Lemmátko & \texttt{$\backslash$begin\{lemmish\}[volitelný název]} & Triviální pomocný výsledek, nedokazujeme, ponecháno k rozmyšlení.\\
+	\hline
+	Lemma & \texttt{$\backslash$begin\{lemma\}[volitelný název]} & Netriviální a často pomocný výsledek, nejedná se důležitostí o větu, ale je dokázán.\\
+	\hline
+	Věta & \texttt{$\backslash$begin\{theorem\}[volitelný název]} & Podstatný výsledek textu, dokazujeme a pokládáme důraz na důsledky.\\
+	\hline
+	Tvrzení & \texttt{$\backslash$begin\{claim\}[volitelný název]} & Potřebujete dropnout Poincarého lemma, ale nechcete zajebat 20 stran důkazem? Od toho je tu tvrzení. Vždy ale odkázat na zdroj, kde lze důkaz najít!\\
+	\hline
+	Definice & \texttt{$\backslash$begin\{definition\}[volitelný název]} & Definice...\\
+	\hline
+	Důkaz & \texttt{$\backslash$begin\{proof\}[nějaké věty]} & Prostředí začíná \textit{Důkaz \uv{nějaké věty}:} kde \uv{nějaké věty} může být prázdné.\\
+	\hline
+\end{tabular}
+\end{table*}
+\section{Demonstrace prostředí}
+Níže je definováno lemmátko bez názvu. 
+Název by samozřejmě mohl být definován.
+Všimněte si taky, že každou větu v kódu začínám na novém řádku.
+Ve vygenerovaném textu se jeden linebreak projeví jako mezera, takže text je v pořádku.
+Nicméně bude se nám pak nohem lépe v GitHubu sledovat změny. 
+Psát každou větu na vlastní řádek se prostě mega vyplácí...
+
+Nyní jsme do kódu vložili prázdný řádek. 
+Tak začíná nový odstavec.
+Odstavec \hl{NEZAČÍNÁME} tak, že vložíme \texttt{$\backslash\backslash$}, ale prázdným řádkem.
+A teď už ta prostředí:
+\begin{lemmish}
+Pro všechna $a,b\in\mathbb{R}$ platí, že
+\begin{equation}
+	(a+b)^2=a^2+b^2 \iff a=0 \vee b=0
+\end{equation}
+\end{lemmish}
+Další prostředí je pak Lemma.
+\begin{lemma}[Červeňanovo blbé lemma]
+	Pro všechna $a,b\in\mathbb{R}$ platí, že
+	\begin{equation}
+		(a+b)^2=a^2+b^2 \iff a=0 \vee b=0
+	\end{equation}
+\end{lemma}
+% Zde by se mělo zmíit, kdo následující důkaz techal, abychom to nemuseli hledat na Gitu. Takto:
+% Sepsal:
+%	Honzák, 25.9.2024
+% Opravy:
+%	Venda 10.11.2024
+% Ta větší mezera je tabulátor. Ve VS Code běžte do 
+% File -> Preferences -> Settings -> Commonly Used -> Editor Tab Size
+% A nastavte si to na 5, je to pro psaní TeXu trochu přehlednější než defaultní 4. 
+% NEPOUŽÍVEJTE MEZERY NA ODSAZENÍ, PRO NAŠE VLASTNÍ DOBRO.
+\begin{proof}
+	Lemmata jsou dokazována, tedy měli bychom nyní podat důkaz. 
+	Připravil jsem tenzorovou abecedu, takže stačí psát
+	{\tt
+	$\backslash$tenA\{\^{}$\backslash$mu\_;\_$\backslash$nu\} 
+	}
+	a dostaneme
+	\begin{equation}
+		\tenA{^\mu_;_\nu}\ .
+	\end{equation}
+	Máme samozřejmě i malé písmena:
+	\begin{equation}
+		\tenu{^\mu} \tenu{^\nu} \teng{_\mu_\nu} = -1.
+	\end{equation}
+	Další zavedené abecedy jsou \texttt{mathbb} a \texttt{mathcal}:
+	\begin{center}
+		\texttt{$\backslash$bbQ} = $\bbQ$ a \texttt{$\backslash$calQ} = $\calQ$.
+	\end{center}
+\end{proof}
+Konec důkazu je jasně vidět díky končící šedé čáře a díky čtverečku. Později se podíváme i na tvrzeni \ref{claim:cervenanovo_blbe_tvrzeni} a definici \ref{claim:cervenanova_blba_definice}.s
+Pokračujeme větou.
+\begin{theorem}[Červeňanova blbá věta]
+	Pro všechna $a,b\in\mathbb{R}$ platí, že
+	\begin{equation}
+		(a+b)^2=a^2+b^2 \iff a=0 \vee b=0
+	\end{equation}
+\end{theorem}
+\begin{proof}[Červeňanovy blbé věty]
+	Věty jsou dokazovány, tedy měli bychom nyní podat důkaz.
+	Všimněte si, že i v důkazu entrujeme věty. 
+	Také si všimněte, že tabulátory nekurví počet mezer ani nijak nekurví text, projeví se jen v kódu.
+	
+	Je dobré si taky všimnout, že tento důkaz je pojmenovaný.
+	Konvence je: \texttt{$\backslash$begin\{proof\}[Červeňanovy blbé věty]}.
+	Tedy při pojmenovávání v kódu se ptáme: 
+	
+	\uv{Důkaz jaké které věty?}
+
+	\uv{Důkaz Červeňanovy blbé věty.}
+\end{proof}
+
+V další části textu si ukážeme tvrzení.
+\begin{claim}[Červeňanovo blbé tvrzení]
+	\label{claim:cervenanovo_blbe_tvrzeni}
+	Pro všechna $a,b\in\mathbb{R}$ platí, že
+	\begin{equation}
+		(a+b)^2=a^2+b^2 \iff a=0 \vee b=0
+	\end{equation}
+\end{claim}
+A na závěr definici.
+\begin{definition}[Červeňanova nesmyslná definice]
+	\label{claim:cervenanova_blba_definice}
+	Pro všechna $a,b\in\mathbb{R}$ platí, že
+	\begin{equation}
+		(a+b)^2=a^2+b^2 \iff a=0 \vee b=0
+	\end{equation}
+\end{definition}          
+
+\end{document}
