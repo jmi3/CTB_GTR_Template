@@ -3,8 +3,9 @@
 %
 %
 %
-\ProvidesPackage{F10}[25/09/2024 Cervenan v1.0.1]
+\ProvidesPackage{F10}[14/03/2025 Cervenan v1.0.2]
 \RequirePackage{tensor}  
+\RequirePackage{bm}  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -13,7 +14,7 @@
 
 % TEXT FORMATTING SETTINGS
 
-\def\HighlightColor{purple}
+\def\HighlightColor{violet}
 
 
 
@@ -29,6 +30,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\cph{\varphi}
+\def\d{\mathrm{d}}
+\def\dd{\bm\d}
+\def\laplace{\Delta}
+\def\Lie{\calL}
+\def\covd{\bm{\nabla}}
+\def\bfGamma{\bm{\Gamma}}
+\def\bfpartial{\bm{\partial}}
+\def\pd{\partial}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TENSORS AS SYMBOLS
@@ -88,9 +98,120 @@
 \newcommand{\tenz}[1]{\tensor{z}{#1}}
 
 
+
+\newcommand{\tenbfA}[1]{\tensor{\bm{A}}{#1}}
+\newcommand{\tenbfB}[1]{\tensor{\bm{B}}{#1}}
+\newcommand{\tenbfC}[1]{\tensor{\bm{C}}{#1}}
+\newcommand{\tenbfD}[1]{\tensor{\bm{D}}{#1}}
+\newcommand{\tenbfE}[1]{\tensor{\bm{E}}{#1}}
+\newcommand{\tenbfF}[1]{\tensor{\bm{F}}{#1}}
+\newcommand{\tenbfG}[1]{\tensor{\bm{G}}{#1}}
+\newcommand{\tenbfH}[1]{\tensor{\bm{H}}{#1}}
+\newcommand{\tenbfI}[1]{\tensor{\bm{I}}{#1}}
+\newcommand{\tenbfJ}[1]{\tensor{\bm{J}}{#1}}
+\newcommand{\tenbfK}[1]{\tensor{\bm{K}}{#1}}
+\newcommand{\tenbfL}[1]{\tensor{\bm{L}}{#1}}
+\newcommand{\tenbfM}[1]{\tensor{\bm{M}}{#1}}
+\newcommand{\tenbfN}[1]{\tensor{\bm{N}}{#1}}
+\newcommand{\tenbfO}[1]{\tensor{\bm{O}}{#1}}
+\newcommand{\tenbfP}[1]{\tensor{\bm{P}}{#1}}
+\newcommand{\tenbfQ}[1]{\tensor{\bm{Q}}{#1}}
+\newcommand{\tenbfR}[1]{\tensor{\bm{R}}{#1}}
+\newcommand{\tenbfS}[1]{\tensor{\bm{S}}{#1}}
+\newcommand{\tenbfT}[1]{\tensor{\bm{T}}{#1}}
+\newcommand{\tenbfU}[1]{\tensor{\bm{U}}{#1}}
+\newcommand{\tenbfV}[1]{\tensor{\bm{V}}{#1}}
+\newcommand{\tenbfW}[1]{\tensor{\bm{W}}{#1}}
+\newcommand{\tenbfX}[1]{\tensor{\bm{X}}{#1}}
+\newcommand{\tenbfY}[1]{\tensor{\bm{Y}}{#1}}
+\newcommand{\tenbfZ}[1]{\tensor{\bm{Z}}{#1}}
+
+\newcommand{\tenbfa}[1]{\tensor{\bm{a}}{#1}}
+\newcommand{\tenbfb}[1]{\tensor{\bm{b}}{#1}}
+\newcommand{\tenbfc}[1]{\tensor{\bm{c}}{#1}}
+\newcommand{\tenbfd}[1]{\tensor{\bm{d}}{#1}}
+\newcommand{\tenbfe}[1]{\tensor{\bm{e}}{#1}}
+\newcommand{\tenbff}[1]{\tensor{\bm{f}}{#1}}
+\newcommand{\tenbfg}[1]{\tensor{\bm{g}}{#1}}
+\newcommand{\tenbfh}[1]{\tensor{\bm{h}}{#1}}
+\newcommand{\tenbfi}[1]{\tensor{\bm{i}}{#1}}
+\newcommand{\tenbfj}[1]{\tensor{\bm{j}}{#1}}
+\newcommand{\tenbfk}[1]{\tensor{\bm{k}}{#1}}
+\newcommand{\tenbfl}[1]{\tensor{\bm{l}}{#1}}
+\newcommand{\tenbfm}[1]{\tensor{\bm{m}}{#1}}
+\newcommand{\tenbfn}[1]{\tensor{\bm{n}}{#1}}
+\newcommand{\tenbfo}[1]{\tensor{\bm{o}}{#1}}
+\newcommand{\tenbfp}[1]{\tensor{\bm{p}}{#1}}
+\newcommand{\tenbfq}[1]{\tensor{\bm{q}}{#1}}
+\newcommand{\tenbfr}[1]{\tensor{\bm{r}}{#1}}
+\newcommand{\tenbfs}[1]{\tensor{\bm{s}}{#1}}
+\newcommand{\tenbft}[1]{\tensor{\bm{t}}{#1}}
+\newcommand{\tenbfu}[1]{\tensor{\bm{u}}{#1}}
+\newcommand{\tenbfv}[1]{\tensor{\bm{v}}{#1}}
+\newcommand{\tenbfw}[1]{\tensor{\bm{w}}{#1}}
+\newcommand{\tenbfx}[1]{\tensor{\bm{x}}{#1}}
+\newcommand{\tenbfy}[1]{\tensor{\bm{y}}{#1}}
+\newcommand{\tenbfz}[1]{\tensor{\bm{z}}{#1}}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MATHEMATICAL FONTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\bfA{\bm{A}}
+\def\bfB{\bm{B}}
+\def\bfC{\bm{C}}
+\def\bfD{\bm{D}}
+\def\bfE{\bm{E}}
+\def\bfF{\bm{F}}
+\def\bfG{\bm{G}}
+\def\bfH{\bm{H}}
+\def\bfI{\bm{I}}
+\def\bfJ{\bm{J}}
+\def\bfK{\bm{K}}
+\def\bfL{\bm{L}}
+\def\bfM{\bm{M}}
+\def\bfN{\bm{N}}
+\def\bfO{\bm{O}}
+\def\bfP{\bm{P}}
+\def\bfQ{\bm{Q}}
+\def\bfR{\bm{R}}
+\def\bfS{\bm{S}}
+\def\bfT{\bm{T}}
+\def\bfU{\bm{U}}
+\def\bfV{\bm{V}}
+\def\bfW{\bm{W}}
+\def\bfX{\bm{X}}
+\def\bfY{\bm{Y}}
+\def\bfZ{\bm{Z}}
+
+\def\bfa{\bm{a}}
+\def\bfb{\bm{b}}
+\def\bfc{\bm{c}}
+\def\bfd{\bm{d}}
+\def\bfe{\bm{e}}
+\def\bff{\bm{f}}
+\def\bfg{\bm{g}}
+\def\bfh{\bm{h}}
+\def\bfi{\bm{i}}
+\def\bfj{\bm{j}}
+\def\bfk{\bm{k}}
+\def\bfl{\bm{l}}
+\def\bfm{\bm{m}}
+\def\bfn{\bm{n}}
+\def\bfo{\bm{o}}
+\def\bfp{\bm{p}}
+\def\bfq{\bm{q}}
+\def\bfr{\bm{r}}
+\def\bfs{\bm{s}}
+\def\bft{\bm{t}}
+\def\bfu{\bm{u}}
+\def\bfv{\bm{v}}
+\def\bfw{\bm{w}}
+\def\bfx{\bm{x}}
+\def\bfy{\bm{y}}
+\def\bfz{\bm{z}}
+
 % Mathcal symbols
 \def\calA{\mathcal{A}}
 \def\calB{\mathcal{B}}
